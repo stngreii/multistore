@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTISTORE Projek Penguatan Profil Pelajar Pancasila</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome untuk ikon Instagram -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header dengan Video Background -->
+    <header>
+        <div class="video-bg">
+            <video autoplay muted loop id="headerVideo">
+                <source src="video/mp4/video-background.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+        </div>
+        <div class="header-content">
+            <!-- Gambar Logo -->
+            <img src="image/LOGO MULTIGROUP.png" alt="Logo Artheus Store" class="logo">
+            <h1>MULTISTORE</h1>
+            <p>Projek Penguatan Profil Pelajar Pancasila</p>
+        </div>
+    </header>
+
+    <!-- Navigation Menu yang Muncul dengan Tombol -->
+    <nav class="menu slide-menu" id="navMenu">
+        <button class="tab-btn" onclick="toggleTab(event, 'produk-kami')">Produk</button>
+        <button class="tab-btn" onclick="toggleTab(event, 'deskripsi-produk')">Deskripsi Produk</button>
+        <button class="tab-btn" onclick="toggleTab(event, 'komentar')">Testimoni</button>
+        <button class="tab-btn" onclick="toggleTab(event, 'masukan')">Masukan</button> <!-- Tab baru "Masukan" -->
+        <button class="tab-btn" onclick="toggleTab(event, 'kelompok-kita')">Kelompok Kita</button>
+    </nav>
+
+    <!-- Tab Content Sections -->
+    <section id="produk-kami" class="tab-content">
+        <div class="container">
+            <h2>Produk Kami</h2>
+            <p>Berikut adalah produk-produk yang tersedia di Wirausaha Shop:</p>
+            <ul>
+                <li>Jasa Editing Video</li>
+                <li>Mulai RP. 15.000 Per Video Sesuai Kesusahan Video</li>
+                <img src="produk/video.png" alt="Produk Kami" class="tab-image">
+
+                <li>Desain Logo / Powerpoint</li>
+                <li>Mulai RP. 10.000 Per Desain</li>
+                <img src="produk/logo.png" alt="Produk Kami" class="tab-image">
+                <img src="produk/ppt.png" alt="Produk Kami" class="tab-image">
+
+                <li>Jasa Edit Audio</li>
+                <li>Mulai RP. 15.000 Per Audio</li>
+                <img src="produk/audio.png" alt="Produk Kami" class="tab-image">
+
+                <li>Jasa Edit Foto</li>
+                <li>Mulai RP. 5.000 Per Foto</li>
+                <img src="produk/foto.png" alt="Produk Kami" class="tab-image">
+            </ul>
+        </div>
+    </section>
+
+    <section id="deskripsi-produk" class="tab-content">
+        <div class="container">
+            <h2>Deskripsi Produk</h2>
+            <p>Informasi mengenai deskripsi pembeli atau pelayanan pembeli.</p>
+            <ul>
+                <p>Kami menyediakan jasa Editing maupun desain dengan harga terjangkau, Untuk editing sendiri tidak bisa menyesuaikan dengan harganya, Bisa saja harganya ditambah sesuai kesulitan video. Info lebih lengkapnya hubungi kami melalui instagram.</p>
+            </ul>
+        </div>
+    </section>
+
+    <section id="komentar" class="tab-content">
+        <div class="container">
+            <h2>Testimoni</h2>
+            <p>Berikut adalah beberapa testimoni kami</p>
+        </div>
+    </section>
+
+    <section id="kelompok-kita" class="tab-content">
+        <div class="container">
+            <h2>Kelompok Kita</h2>
+            <p>Anggota kelompok kita ditampilkan di sini.</p>
+            <img src="kelompok/alamria.png" alt="Kelompok Kami" class="tab-image">
+            <img src="kelompok/anom.png" alt="Kelompok Kami" class="tab-image">
+            <img src="kelompok/iwan.png" alt="Kelompok Kami" class="tab-image">
+            <img src="kelompok/nunu.png" alt="Kelompok Kami" class="tab-image">
+            <img src="kelompok/rei.png" alt="Kelompok Kami" class="tab-image">
+            <img src="kelompok/nyipnyip.png" alt="Kelompok Kami" class="tab-image">
+        </div>
+    </section>
+
+    <!-- Tab Masukan dengan form input -->
+    <section id="masukan" class="tab-content">
+        <div class="container">
+            <h2>Masukan</h2>
+            <p>Silakan masukkan email dan komentar Anda di bawah ini:</p>
+
+            <!-- Form untuk memasukkan Gmail dan komentar -->
+            <form action="#" method="POST" id="masukanForm">
+                <div class="form-group">
+                    <label for="email">Email (Gmail):</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan username Anda" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="komentar">Komentar:</label>
+                    <textarea id="komentar" name="komentar" rows="4" placeholder="Masukkan komentar Anda" required></textarea>
+                </div>
+                
+
+                <button type="submit">Kirim</button>
+            </form>
+            <img src="komentar/1.png" alt="Komentar Pelanggan" class="tab-image">
+            <img src="komentar/2.png" alt="Komentar Pelanggan" class="tab-image">
+            <img src="komentar/3.png" alt="Komentar Pelanggan" class="tab-image">
+        </div>
+    </section>
+
+    <!-- Instagram Link di Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Hubungi kami melalui Instagram</p>
+            <a href="https://www.instagram.com/username_anda" target="_blank" class="instagram-icon">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleTab(evt, tabName) {
+            var i, tabcontent;
+            tabcontent = document.getElementsByClassName("tab-content");
+
+            // Loop through all tab-content and hide them
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Show the selected tab
+            var currentTab = document.getElementById(tabName);
+            if (currentTab) {
+                currentTab.classList.add("active");
+            }
+        }
+
+        function toggleMenu() {
+            var navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("open-menu");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body dengan gradient background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #6a5acd, #00bfff); /* Gradient biru keunguan ke biru kemudaan */
+    color: white;
+}
+
+/* Header styling dengan video background */
+header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+header video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-content {
+    z-index: 1;
+}
+
+/* Styling untuk logo di atas judul */
+.logo {
+    max-width: 150px;  /* Atur ukuran logo */
+    height: auto;
+    margin-bottom: 20px; /* Memberikan ruang di bawah logo */
+}
+
+/* Styling untuk judul dan deskripsi di header */
+.header-content h1 {
+    font-size: 3em;
+    margin: 0.5em 0;
+}
+
+.header-content p {
+    font-size: 1.2em;
+}
+
+/* Navigation menu styling */
+nav.menu {
+    display: flex;
+    justify-content: center; /* Centering the tabs horizontally */
+    align-items: center;
+    background: linear-gradient(to right, #6a5acd, #003366, #123b49); /* Gradient ungu ke biru tua dan biru kemudaan */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.tab-btn {
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+.tab-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    margin-top: 60px; /* Memberikan ruang di bawah menu fixed */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Memperbesar ukuran teks di dalam konten tab */
+.tab-content .container h2 {
+    font-size: 2.5em;  /* Ukuran font untuk judul di dalam tab */
+    margin-bottom: 20px; /* Memberikan jarak bawah agar tidak terlalu rapat */
+    text-align: center; /* Menyelaraskan judul ke tengah */
+}
+
+.tab-content .container p {
+    font-size: 1.5em;  /* Ukuran font untuk paragraf */
+    line-height: 1.8;  /* Menambah jarak antar baris untuk kenyamanan baca */
+    margin-bottom: 20px; /* Memberikan jarak bawah antara paragraf dan elemen lainnya */
+    text-align: center; /* Menyelaraskan teks paragraf ke tengah */
+}
+
+.tab-content .container ul {
+    font-size: 1.3em; /* Ukuran font untuk daftar produk */
+    padding-left: 20px;  /* Memberikan padding kiri agar list terlihat rapi */
+    text-align: center; /* Menyelaraskan daftar produk ke tengah */
+}
+
+.tab-content .container ul li {
+    margin-bottom: 10px;  /* Memberikan jarak antar item dalam list */
+}
+
+/* Menata gambar dalam tab content */
+.tab-image {
+    max-width: 60%;  /* Membatasi ukuran gambar agar tidak terlalu besar */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Styling untuk footer */
+footer {
+    background-color: #003366; /* Biru tua */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer .footer-content {
+    color: white;
+}
+
+footer .instagram-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+footer .instagram-icon:hover {
+    color: #e1306c;  /* Warna merah muda Instagram saat hover */
+}
+
+/* Styling untuk form input */
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3b2a75;
+}
+
+/* Menambahkan animasi fade-in untuk tab konten */
+.tab-content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tab-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animasi untuk logo dan header teks */
+header h1 {
+    opacity: 0;
+    animation: fadeInDown 2s forwards;
+}
+
+header p {
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-in efek untuk tombol menu */
+.menu .tab-btn {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out forwards;
+}
+
+.menu .tab-btn:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.menu .tab-btn:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.menu .tab-btn:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.menu .tab-btn:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.menu .tab-btn:nth-child(5) {
+    animation-delay: 1s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Efek Hover untuk tombol navigasi */
+.menu .tab-btn:hover {
+    background-color: #649be3;
+    transform: scale(1.1);
+}
+
+/* Animasi zoom-in untuk gambar dalam tab konten */
+.tab-image {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tab-content.active .tab-image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animasi untuk form input pada tab Masukan */
+#masukanForm input,
+#masukanForm textarea,
+#masukanForm button {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+#masukanForm input:nth-child(1),
+#masukanForm textarea:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+#masukanForm button {
+    animation-delay: 0.6s;
+}
+
+/* Styling untuk footer */
+footer {
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
